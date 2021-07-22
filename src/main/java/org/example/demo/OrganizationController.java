@@ -1,9 +1,10 @@
-package com.example.demo;
+package org.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 public class OrganizationController {
@@ -15,10 +16,10 @@ public class OrganizationController {
 
 	
 	@Autowired
-	EmployeeClient employeeClient;
+	private EmployeeClient employeeClient;
 	
 	@Autowired
-	DepartmentClient departmentClient;
+	private DepartmentClient departmentClient;
 	
 	@RequestMapping("/pingEmployeeService/{id}")
 	public String pingEmployeeService(@PathVariable("id") int id) {

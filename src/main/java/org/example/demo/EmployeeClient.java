@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.example.demo;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,4 +10,5 @@ public interface EmployeeClient {
 	
 	@GetMapping("/initEmployee/{id}")
 	public String pingEmployeeService(@PathVariable("id") int id);
+	
 }
